@@ -13,8 +13,21 @@ import {
 	ProfissionalsContainer,
 	ProfissionalsPaper,
 } from '@styles/pages/index/style';
+import useIndex from 'data/hooks/pages/useIndex';
 
 export default function Home() {
+	const {
+		cep,
+		setCep,
+		cepValid,
+		searchProfissionals,
+		diarists,
+		diaristsRemaining,
+		error,
+		searchDone,
+		load,
+	} = useIndex();
+
 	return (
 		<div>
 			<SafeEnvironment />
@@ -32,45 +45,65 @@ export default function Home() {
 						label={'Digite seu CEP'}
 						fullWidth
 						variant={'outlined'}
+						value={cep}
+						onChange={(e) => setCep(e.target.value)}
 					/>
 
-					{false && <Typography color={'error'}>Cpf inválido</Typography>}
+					{error && <Typography color={'error'}>{error}</Typography>}
 
 					<Button
 						variant={'contained'}
 						color={'secondary'}
 						sx={{ width: '13.75rem' }}
+						disabled={!cepValid || load}
+						onClick={() => searchProfissionals(cep)}
 					>
-						{false ? <CircularProgress size={20} /> : 'Buscar'}
+						{load ? <CircularProgress size={20} /> : 'Buscar'}
 					</Button>
 				</FormElementsContainer>
 
-				{true ? (
-					<ProfissionalsPaper>
-						<ProfissionalsContainer>
-							<UserInformation
-								picture={'https://github.com/LeoMSSilva.png'}
-								name={'Leonardo'}
-								rating={4}
-								description={'Rio de Janeiro'}
-							/>
-						</ProfissionalsContainer>
+				{searchDone &&
+					(diarists.length > 0 ? (
+						<ProfissionalsPaper>
+							<ProfissionalsContainer>
+								{diarists.map((iten, index) => {
+									return (
+										<UserInformation
+											key={index}
+											picture={iten.foto_usuario}
+											name={iten.nome_completo}
+											rating={iten.reputacao}
+											description={iten.cidade}
+										/>
+									);
+								})}
+							</ProfissionalsContainer>
 
-						<Container sx={{ textAlign: 'center' }}>
-							<Typography sx={{ mt: 5 }}>
-								...e mais x profissionais atendem ao seu endereço.
-							</Typography>
+							<Container sx={{ textAlign: 'center' }}>
+								{diaristsRemaining > 0 && (
+									<Typography sx={{ mt: 5 }}>
+										...e mais {diaristsRemaining}
+										{diaristsRemaining > 1
+											? ' profissionais atendem '
+											: ' profissional atende '}
+										ao seu endereço.
+									</Typography>
+								)}
 
-							<Button variant={'contained'} color={'secondary'} sx={{ mt: 5 }}>
-								Contratar um profissional
-							</Button>
-						</Container>
-					</ProfissionalsPaper>
-				) : (
-					<Typography align={'center'} color={'textPrimary'}>
-						Ainda não temos nenhuma diarista disponível em sua cidade!
-					</Typography>
-				)}
+								<Button
+									variant={'contained'}
+									color={'secondary'}
+									sx={{ mt: 5 }}
+								>
+									Contratar um profissional
+								</Button>
+							</Container>
+						</ProfissionalsPaper>
+					) : (
+						<Typography align={'center'} color={'textPrimary'}>
+							Ainda não temos nenhuma diarista disponível em sua cidade!
+						</Typography>
+					))}
 			</Container>
 		</div>
 	);
