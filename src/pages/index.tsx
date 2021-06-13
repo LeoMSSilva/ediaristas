@@ -1,7 +1,9 @@
+import SafeEnvironment from '@components/feedback/SafeEnvironment';
+
 export default function Home() {
-		return (
+	return (
 		<div>
-			Main
+			<SafeEnvironment />
 		</div>
 	);
 }
