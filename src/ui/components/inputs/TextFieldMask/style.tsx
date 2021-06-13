@@ -9,11 +9,4 @@ export const TextFieldStyle = styled(TextField)`
   .MuiOutlineInput-notchedOutline{
     border-color:  ${({ theme }) => theme.palette.grey[100]};
   }
-
-  
-	/* 
-	color: ${({ theme }) =>
-		theme.palette.getContrastText(theme.palette.primary.main)};
-	padding: ${({ theme }) => theme.spacing(4)} 0;
-	margin-top: auto; */
 `;
