@@ -1,34 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Ediaristas</h1>
 
-## Getting Started
+[![Author](https://img.shields.io/badge/author-LeoMSSilva-blue?style=flat-square)](https://github.com/LeoMSSilva)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)](https://github.com/LeoMSSilva)
+[![Languages](https://img.shields.io/github/languages/count/LeoMSSilva/ediaristas?color=blue&style=flat-square)](#)
+[![Stars](https://img.shields.io/github/stars/LeoMSSilva/ediaristas?color=blue&style=flat-square)](https://github.com/LeoMSSilva/ediaristas/stargazers)
+[![Forks](https://img.shields.io/github/forks/LeoMSSilva/ediaristas?color=blue&style=flat-square)](https://github.com/LeoMSSilva/ediaristas/network/members)
+[![Contributors](https://img.shields.io/github/contributors/LeoMSSilva/ediaristas?color=blue&style=flat-square)](https://github.com/LeoMSSilva/ediaristas/graphs/contributors)
 
-First, run the development server:
+
+---
+
+# :pushpin: Table of Contents
+
+- :house: [About](#about)
+- :dart: [Installation](#Installation)
+  - :gear: [Install dependencies](##Install_dependencies)
+  - :rocket: [Getting Started](##Getting_Started)
+- :computer: [Techs](#Techs)
+- :handshake: [Contributing](#Contributing)
+
+---
+
+# :house: About
+
+This project was developed with **typescript** as programming language and framework **react** with **next**.
+
+**React-input-mask** was used to style components inputs and **material-ui** for the other components.
+
+To query data in the api, **axios** was used.
+
+This project is an aplication used to find for diarists in your city.
+
+---
+
+# :dart: Installation
+
+**First you need to install:**
+
+- [Node.js](https://pt-br.nodejs.org/) (required)
+- [Yarn](https://yarnpkg.com/) (optional)
+
+  **Then in order, clone the project.**
+
+By HTTPS, running this command:
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/LeoMSSilva/ediaristas.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or by ssh, running this command:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  git clone git@github.com:LeoMSSilva/ediaristas.git
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+SSH is a secure protocol, but you need to register a key ssh in your github before.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## :hammer_and_wrench: Install dependencies
 
-## Learn More
+```bash
+  yarn
+```
 
-To learn more about Next.js, take a look at the following resources:
+or
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  yarn install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## :rocket: Getting Started
 
-## Deploy on Vercel
+```bash
+  npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+or
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+  yarn dev
+```
+
+And open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+# :computer: Techs
+
+- [Typescript](https://www.typescriptlang.org/)
+- [React.js](https://pt-br.reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Material-ui](https://material-ui.com/pt/)
+- [React-input-mask](https://github.com/sanniassin/react-input-mask)
+- [Axios](https://github.com/axios/axios)
+
+---
+
+# :handshake: Contributing
+
+Contributions, issues and feature requests are welcome! Feel free to **file a new issue** on the [ediaristas](https://github.com/LeoMSSilva/ediaristas/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!
+
+---
