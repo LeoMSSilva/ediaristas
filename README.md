@@ -12,12 +12,12 @@
 
 # :pushpin: Table of Contents
 
-- :house: [About](#about)
-- :dart: [Installation](#Installation)
-  - :gear: [Install dependencies](##Install_dependencies)
-  - :rocket: [Getting Started](##Getting_Started)
-- :computer: [Techs](#Techs)
-- :handshake: [Contributing](#Contributing)
+- :house: [About](#house-about)
+- :dart: [Installation](#dart-installation)
+  - :gear: [Install dependencies](#hammer_and_wrench-install-dependencies)
+  - :rocket: [Getting started](#rocket-getting-started)
+- :computer: [Techs](#computer-techs)
+- :handshake: [Contributing](#handshake-contributing)
 
 ---
 
